@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Avaliação com Gabarito</title>
+    <link rel="stylesheet" href="indexQuiz.css">
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>Conhecimentos Tech: Quiz </h1>
+
+    <form id="quizForm">
+      <section class="pergunta-card" id="card-q1">
+        <h3>1. Qual é a linguagem padrão para estruturar páginas web?</h3>
+        <div class="opcao-item">
+          <input type="radio" id="p1_a" name="p1" value="css">
+          <label for="p1_a">CSS</label>
+        </div>
+        <div class="opcao-item">
+          <input type="radio" id="p1_b" name="p1" value="html">
+          <label for="p1_b">HTML</label>
+        </div>
+        <div class="opcao-item">
+          <input type="radio" id="p1_c" name="p1" value="js">
+          <label for="p1_c">JavaScript</label>
+        </div>
+      </section>
+
+      <section class="pergunta-card" id="card-q2">
+        <h3>2. Qual tecla atualiza a página do navegador?</h3>
+        <div class="opcao-item">
+          <input type="radio" id="p2_a" name="p2" value="f2">
+          <label for="p2_a">F2</label>
+        </div>
+        <div class="opcao-item">
+          <input type="radio" id="p2_b" name="p2" value="f5">
+          <label for="p2_b">F5</label>
+        </div>
+      </section>
+
+      <section class="pergunta-card" id="card-q3">
+        <h3>3. Quais das seguintes alternativas são tecnologias focadas em Front-end? (Selecione todas as corretas)</h3>
+        <div class="opcao-item">
+          <input type="checkbox" id="p3_a" name="p3" value="html">
+          <label for="p3_a">HTML</label>
+        </div>
+        <div class="opcao-item">
+          <input type="checkbox" id="p3_b" name="p3" value="php">
+          <label for="p3_b">PHP</label>
+        </div>
+        <div class="opcao-item">
+          <input type="checkbox" id="p3_c" name="p3" value="css">
+          <label for="p3_c">CSS</label>
+        </div>
+      </section>
+
+      <section class="pergunta-card" id="card-q4">
+        <h3>4. Quais dos itens abaixo são ferramentas/sistemas operacionais voltados para infraestrutura ou versionamento?</h3>
+        <div class="opcao-item">
+          <input type="checkbox" id="p4_a" name="p4" value="linux">
+          <label for="p4_a">Linux</label>
+        </div>
+        <div class="opcao-item">
+          <input type="checkbox" id="p4_b" name="p4" value="photoshop">
+          <label for="p4_b">Photoshop</label>
+        </div>
+        <div class="opcao-item">
+          <input type="checkbox" id="p4_c" name="p4" value="git">
+          <label for="p4_c">Git</label>
+        </div>
+      </section>
+
+
+      <section class="pergunta-card" id="card-q5">
+        <h3>5. Explique o conceito de algoritimos. (Mínimo de 3 palavras)</h3>
+        <textarea id="p5" name="p5" placeholder="Digite sua resposta aqui..."></textarea>
+      </section>
+
+      <div id="erro-validacao-container" class="erro-container" style="display: none; margin-top: 24px;"></div>
+
+      <button type="submit" class="btn-enviar">Enviar Avaliação</button>
+      
+    </form>
+
+
+    <div id="resultado" class="resultado-box">
+      <h2>Resultado da Avaliação</h2>
+      <p id="placarFinal"></p>
+      
+      <h3>Objeto JSON de Entrega:</h3>
+      <pre id="saida"></pre>
+    </div>
+
+  </div>
+
+    <script src="indexQuiz.js"></script>
+
+</body>
+</html>

@@ -22,6 +22,9 @@ document.addEventListener("keyup", validaCampos);
 btnConf.addEventListener("click", preparaDados)
 
 function validaCampos(){
+    
+    retorno.style.display = 'none';
+
     let erro = false;
     limpaErro();
     estdoBtn();
@@ -79,7 +82,7 @@ function validaCampos(){
 function preparaDados(){
     event.preventDefault();
 
-    const retorno = document.getElementById("retorno_json");
+    retorno.style.display = 'block';
 
     let dados = {
         nome: inputNome.value.trim(),

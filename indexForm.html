@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacao de formulario</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color: #f4f4f4;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        form{
+            background-color: white;
+            padding: 30px;
+            width: 350px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        #retorno_json{
+            background-color: rgba(0,0,0,0.1);
+            height: 300px;
+            width: 400px;
+
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+            white-space: pre-wrap;
+            word-break: break-word;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        #retorno_json p{
+            width: 95%;
+            margin: auto;
+        }
+
+        label{
+            font-weight: bold;
+            color: #333;
+        }
+
+        input{
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+
+            outline: none;
+            transition: 0.2s;
+        }
+
+        input:focus{
+            border-color: #4a90e2;
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+        }
+
+        button{
+            margin-top: 10px;
+            padding: 12px;
+
+            border: none;
+            border-radius: 6px;
+
+            background-color: #4a90e2;
+            color: white;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <form>
+        <label for="input_nome" id="label_nome">Digite seu nome:</label>
+        <input type="text" id="input_nome" placeholder="Ex: Astolfo">
+        <div id="erro_nome"></div>
+
+        <label for="input_email" id="label_email">Digite seu e-mail:</label>
+        <input type="email" id="input_email" placeholder="Ex: astolfo3@gmail.com">
+        <div id="erro_email"></div>
+        
+        <label for="input_senha" id="label_senha">Digite sua senha:</label>
+        <input type="password" id="input_senha" placeholder="Ex: aBsy234@_">
+        <div id="erro_senha"></div>
+        
+        <label for="input_confSenha" id="label_confSenha">Digite sua senha novamente:</label>
+        <input type="password" id="input_confSenha" placeholder="Ex: aBsy234@_">
+        <div id="erro_confSenha"></div>
+        
+        <button type="submit" id="enviar">Enviar</button>
+    </form>
+
+
+    <div id="retorno_json" style="display: none;">
+
+    </div>
+
+    <script src="scriptForm.js"></script>
+</body>
+</html>
