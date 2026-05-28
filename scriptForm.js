@@ -81,6 +81,7 @@ function validaCampos(){
 
 function preparaDados(){
     event.preventDefault();
+    estdoBtn();
 
     retorno.style.display = 'block';
 
@@ -94,7 +95,6 @@ function preparaDados(){
     
     limpaCampos();
     limpaErro();
-    estdoBtn();
 }
 function estdoBtn(){
     btnConf.style.backgroundColor = "#99c3f3";
